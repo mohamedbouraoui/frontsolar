@@ -23,6 +23,7 @@ function EditFacility() {
   // Fetch facility data
   const { loading, data } = useQuery(GET_FACILITY_BY_ID, {
     variables: { id: facilityId },
+    fetchPolicy: 'network-only'
   });
 
   const {
